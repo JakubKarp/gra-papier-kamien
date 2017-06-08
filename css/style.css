@@ -1,5 +1,65 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 .foto {
 	background-image: url(../scissor.png);
 	background-size: cover;
+	height: 100vh;
 	
+	padding-top: 100px;
+	
+}
+.container {
+	
+	height: 80%;
+	background-color: rgba(173, 140, 78, 0.71);
+	padding-top: 20px;
+	border: 2px solid white;
+	box-shadow: 5px 5px 5px #5d5757;
+	border-radius: 5px;
+	position: relative;
+}
+
+	
+.container1 {
+	width: 200px;
+	height: 80px;
+	background-color: #5BC0DE;
+	padding-top: 22px;
+	border-radius: 5px;
+	opacity: 0.9;
+	border: 2px solid white;
+	box-shadow: 5px 5px 5px #5d5757;
+	position: absolute;
+	top: 90px;
+	left: 400px;
+}
+.container2 {
+	width: 400px;
+	height: 80px;
+	background-color: #5BC0DE;
+	padding-top: 22px;
+	border-radius: 5px;
+	opacity: 0.9;
+	border: 2px solid white;
+	box-shadow: 5px 5px 5px #5d5757;
+	position: absolute;
+	top: 100px;
+	left: 280px;
+
+}
+.container3 {
+	width: 400px;
+	height: 100px;
+	background-color: #777777;
+	padding-top: 20px;
+	border-radius: 5px;
+	opacity: 0.9;
+	border: 2px solid white;
+	box-shadow: 5px 5px 5px #5d5757;
+	position: absolute;
+	top: 200px;
+	left: 280px;
 }
