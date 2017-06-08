@@ -17,7 +17,7 @@ pickScissors.addEventListener('click', function() { playerPick('scissors') });
 var gameState = 'notStarted',  //started // ended
     player = {
         name: '',
-        score: 10
+        score: 0
     },
     computer = {
         score: 0
@@ -84,7 +84,8 @@ function playerPick(playerPick) {
 }
 //kto wygrywa
 function checkRoundWinner(playerPick, computerPick) {
-  playerResultElem.innerHTML = ''; /*tu dodałem '';*/ computerResultElem.innerHTML = '';
+  playerResultElem.innerHTML = ''; /*tu dodałem '';*/ 
+	computerResultElem.innerHTML = '';
 
   var winnerIs = 'player';
 
@@ -107,9 +108,9 @@ function checkRoundWinner(playerPick, computerPick) {
         computer.score++;
 		
     }
-
+setGamePoints(); //to wstawiłem i zaczęło wyświetlać wyniki
 }
-console.log(player.score);
+
 //wyniki w tabeli
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
@@ -123,19 +124,23 @@ function playerPick(playerPick) {
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+// i zakończenie gry
+	if (player.score == 10) {
+		gameState = 'ended';
+    setGameElements()
+		newGameBtn.innerText = "Wygrałeś! " + 'Jeszcze raz?';
+	}
+	
+	
+	else if (computer.score == 10) {
+		gameState = 'ended';
+    setGameElements()
+		newGameBtn.innerText = "Niestety, komputer jest lepszy! " + 'Jeszcze raz?';
+	}
+	
 }
-//funkcja - czy któryś z graczy zdobył 10 punktów
-/*
-function endGame() {
- if (player.score == 10) {
-		alert("Wygrałeś!") 
-	}
-	else (computer.score == 10) {
-		prompt("Niestety, komputer jest lepszy!")
-	}
 
-    gameState = case 'ended';
-    setGameElements();
-}
-*/
+
+
+
 

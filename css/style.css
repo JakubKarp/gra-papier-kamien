@@ -24,7 +24,7 @@ body {
 
 	
 .container1 {
-	width: 200px;
+	width: 400px;
 	height: 80px;
 	background-color: #5BC0DE;
 	padding-top: 22px;
@@ -34,7 +34,7 @@ body {
 	box-shadow: 5px 5px 5px #5d5757;
 	position: absolute;
 	top: 90px;
-	left: 400px;
+	left: 300px;
 }
 .container2 {
 	width: 400px;
@@ -63,3 +63,6 @@ body {
 	top: 200px;
 	left: 280px;
 }
+/*#js-newGameButton {
+	background-color: black;
+}*/
